@@ -1,0 +1,35 @@
+1. Explain the importance of Namenode in Hadoop cluster
+
+The major importance of Name node in Hadoop cluster are:
+* The Namenode forms the centre part of HDFS file system . It keeps in track of all the files in the file system and will not track any
+data regarding the files.
+*And teh client will conatct the name node regarding where to locate the file as well where to add or copy or remove a file.when the data lives 
+the name node will successfuly list the relevant data.
+* In case , of HDFS cluster the name node is a point of failure since HDFS is not a high availability system.the file system will tend to go
+offline when the data node goes down.in parallel the secondary name node will be hosted in a seperate machine.
+* It is just an check point which merge the edit file into the fsimage.
+* HDFS will cannot be accessed when the namenode is not available.
+
+And there are certain essentials to look after the name node:
+- There is a need a need for good server with a huge AM sace.when the file system is large or small block size then ECC RAM is used.
+- Datanode,job tracker and task tracker cannot be hosted at a time.
+- It is neccesary to monitor the space of disc and to ad more space wehn the disk space gets low.
+- Seperate disc from image must be used to configure the name node to store one set of transaction logs.
+- Another transaction log will be stored in network mounted disc.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+2. Practice the beginners commands for HDFS from the below link
+
+     a) directory craetion
+     b) directory Contents  
+     c) put command -copied the file Sample.txt to HDFS
+     d) get command - copied the file from HDFS to local system
+     e) utility checking  - DFS Filesystem to Check Utility
+     f) Directory Space - To Check the Directory Space in HDFS
+     g) ls command - ‘list’ command which displays the available files inside a particular path.
+     h) hadoop balancer - ‘balancer’ in it will check for work load on nodes in cluster and balance it.
+     i) HELP - ‘help’ command is used for query.
+     j) Removing file from HDFS - The command ‘rm’ will delete the file stored inside the HDFS.
+     
